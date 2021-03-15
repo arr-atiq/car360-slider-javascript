@@ -10,13 +10,21 @@ img {
     width: 60px;
     height: 60px;
     border: none;
-    outline: none;
     border-radius: 50%;
     background-color: #333333;
+}
+.rotate-button button:focus{
+    outline: none;
+}
+.rotate-button button:hover{
+    background-color: red;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .rotate-button button i {
     color: wheat;
+    transform: rotate(180deg);
 }
 
 .rotate-button {

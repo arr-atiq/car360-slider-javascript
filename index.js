@@ -331,6 +331,91 @@ CButton7.addEventListener("click", function () {
 let rightRotate = document.getElementById('right-rotate-btn');
 let leftRotate = document.getElementById('left-rotate-btn');
 
+
+
+carPosition = 0;
+rightRotate.addEventListener("click", defaultShowCar);
+function defaultShowCar() {
+    if (carPosition === 0) {
+        fCar1.style.display = 'block';
+        fCar2.style.display = 'none';
+        fCar3.style.display = 'none';
+        fCar4.style.display = 'none';
+        carPosition = carPosition + 1;
+    }
+    else if (carPosition === 1) {
+        fCar1.style.display = 'none';
+        fCar2.style.display = 'block';
+        fCar3.style.display = 'none';
+        fCar4.style.display = 'none';
+        carPosition = carPosition + 1;
+    }
+    else if (carPosition === 2) {
+        fCar1.style.display = 'none';
+        fCar2.style.display = 'none';
+        fCar3.style.display = 'block';
+        fCar4.style.display = 'none';
+        carPosition = carPosition + 1;
+    }
+    else if (carPosition === 3) {
+        fCar1.style.display = 'none';
+        fCar2.style.display = 'none';
+        fCar3.style.display = 'none';
+        fCar4.style.display = 'block';
+        carPosition = carPosition + 1;
+    }
+    else {
+        fCar1.style.display = 'block';
+        fCar2.style.display = 'none';
+        fCar3.style.display = 'none';
+        fCar4.style.display = 'none';
+        carPosition = 0;
+    }
+}
+
+
+
+leftRotate.addEventListener("click",defaultBackCar);
+function defaultBackCar() {
+    if (carPosition === 0) {
+        fCar1.style.display = 'none';
+        fCar2.style.display = 'none';
+        fCar3.style.display = 'none';
+        fCar4.style.display = 'block';
+        carPosition = carPosition + 1;
+    }
+    else if (carPosition === 1) {
+        fCar1.style.display = 'none';
+        fCar2.style.display = 'none';
+        fCar3.style.display = 'block';
+        fCar4.style.display = 'none';
+        carPosition = carPosition + 1;
+    }
+    else if (carPosition === 2) {
+        fCar1.style.display = 'none';
+        fCar2.style.display = 'block';
+        fCar3.style.display = 'none';
+        fCar4.style.display = 'none';
+        carPosition = carPosition + 1;
+    }
+    else if (carPosition === 3) {
+        fCar1.style.display = 'block';
+        fCar2.style.display = 'none';
+        fCar3.style.display = 'none';
+        fCar4.style.display = 'none';
+        carPosition = carPosition + 1;
+    }
+    else {
+        fCar1.style.display = 'none';
+        fCar2.style.display = 'none';
+        fCar3.style.display = 'none';
+        fCar4.style.display = 'block';
+        carPosition = 0;
+    }
+}
+
+
+
 // this is rightRotate button handle
 rightRotate.addEventListener("click", function () {
     if (FirstCarDiv.style.display === "block") {
@@ -546,7 +631,7 @@ rightRotate.addEventListener("click", function () {
 })
 
 // this is leftRotate handle
-leftRotate.addEventListener("click", function(){
+leftRotate.addEventListener("click", function () {
     if (FirstCarDiv.style.display === "block") {
         if (carRotatePosition === 1) {
             fCar1.style.display = 'none';
